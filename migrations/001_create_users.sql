@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name    TEXT    NOT NULL,
+  email   TEXT    UNIQUE NOT NULL,
+  balance NUMERIC NOT NULL DEFAULT 0 CHECK (balance >= 0)
+);
